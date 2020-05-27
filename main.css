@@ -1,0 +1,64 @@
+h1{
+    text-align: center;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.button-row{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 3px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    display: inline-block;
+    position: relative;
+    height: 55px;
+    width: 71px;
+    margin: 1px 0 0 1px;
+    color: white;
+    background: #4d4d4d;
+    /* font-family: Share Tech Mono, sans; */
+    font-size: 20px;
+    cursor: default;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    border-color: black;
+}
+#zero {
+    width: 147px;
+    /* margin-bottom: 3px; */
+}
+#equals{
+    height: 135px;
+    width: 71px;
+    position: absolute;
+    bottom: 5px;
+    margin-left:5px;
+    line-height: 127px;
+}
+.number{
+    color: white;
+    text-align: right;
+    margin: 5px 0px 5px 0px;
+    font-size: 25px;
+}
+#formula{
+    color: orange;
+}
+#three {
+    margin-right: 3px;
+}
+#calculator {
+    position: relative;
+    background: black;
+    padding: 3px 5px 3px 5px;
+  }
