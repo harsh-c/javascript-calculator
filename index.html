@@ -12,38 +12,38 @@
     <div class="container">
         <div id="calculator">
             <div class="button-row">
-                <p class="number" id="formula">formula</p>
-                <p class="number">numbers</p>
+                <p class="number" id="formula">0</p>
+                <p class="number" id="output">0</p>
             </div>
             <div class="button-row">
-                <button class="button">AC</button>
-                <button class="button">Del</button>
-                <button class="button">/</button>
-                <button class="button">*</button>
+                <button class="button" id="ac" value = '4' onclick="reset()">AC</button>
+                <button class="button" id="del" value = '4' onclick="inputNumber(this.value)">Del</button>
+                <button class="button" id="divide" value = '/' onclick="inputOperator(this.value)">/</button>
+                <button class="button" id="multiply" value = '*' onclick="inputOperator(this.value)">*</button>
             </div>
             <div class="button-row">
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">-</button>
+                <button class="button" id="seven" value = '7' onclick="inputNumber(this.value)">7</button>
+                <button class="button" id="eight" value = '8' onclick="inputNumber(this.value)">8</button>
+                <button class="button" id="nine" value = '9' onclick="inputNumber(this.value)">9</button>
+                <button class="button" id="subtract" value = '-' onclick="inputOperator(this.value)">-</button>
             </div>
             <div class="button-row">
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">+</button>
+                <button class="button" id="four" value = '4' onclick="inputNumber(this.value)">4</button>
+                <button class="button" id="five" value = '5' onclick="inputNumber(this.value)">5</button>
+                <button class="button" id="six" value = '6' onclick="inputNumber(this.value)">6</button>
+                <button class="button" id="add" value = '+' onclick="inputOperator(this.value)">+</button>
             </div>
             <div class="button-row">
-                <button class="button">1</button>
-                <button class="button">2</button> 
-                <button class="button" id="three">3</button>
+                <button class="button" id="one" value = '1' onclick="inputNumber(this.value)">1</button>
+                <button class="button" id="two" value = '2' onclick="inputNumber(this.value)">2</button> 
+                <button class="button" id="three" value = '3' onclick="inputNumber(this.value)">3</button>
             </div>
             <div class="button-row"> 
-                <button class="button" id="zero">0</button>
-                <button class="button" id="point">.</button>
-                <button class="button" id="equals">=</button>
+                <button class="button" id="zero" value = '0' onclick="inputNumber(this.value)">0</button>
+                <button class="button" id="point" value = '.' onclick="inputOperator(this.value)">.</button>
+                <button class="button" id="equals" value = '=' onclick="equals(this.value)">=</button>
             </div>
         </div>
-        <script src="" async defer></script>
+        <script src="main.js" async defer></script>
     </body>
     </html>
