@@ -10,19 +10,6 @@ function inputNumber(num){
     console.log(number);
     String(formula +=number);
     displayOutput();
-    
-
-
-    // if (firstnum == null){
-    //     firstnum = number;
-    //     formula = String(formula + firstnum);
-    //     displayOutput();
-    // }
-    // else{
-    //     secondnum = number;
-    //     formula = String(formula + secondnum);
-    //     displayOutput(secondnum);
-    // }
     displayFormula(formula);
 }
 
