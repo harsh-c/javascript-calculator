@@ -8,16 +8,21 @@ var operator = "";
 function inputNumber(num){
     var number = parseInt(num);
     console.log(number);
-    if (firstnum == null){
-        firstnum = number;
-        formula = formula + firstnum;
-        displayOutput(firstnum);
-    }
-    else{
-        secondnum = number;
-        formula = formula + secondnum;
-        displayOutput(secondnum);
-    }
+    String(formula +=number);
+    displayOutput();
+    
+
+
+    // if (firstnum == null){
+    //     firstnum = number;
+    //     formula = String(formula + firstnum);
+    //     displayOutput();
+    // }
+    // else{
+    //     secondnum = number;
+    //     formula = String(formula + secondnum);
+    //     displayOutput(secondnum);
+    // }
     displayFormula(formula);
 }
 
@@ -27,7 +32,6 @@ function displayOutput(num, isResult = false){
         firstnum = num; 
         secondnum = null;
     }
-
 }
 
 function displayFormula(formula){
@@ -46,12 +50,14 @@ function inputOperator(op){
     }
     else{
         formula = formula + op;
+        firstnum = parseFloat(formula.split(operator)[0]);
         displayFormula(formula); 
     }
 }
 
 function equals(equalOperator){
     if (equalOperator == "="){
+        secondnum = parseFloat(formula.split(operator)[1]);
         var result = operation(operator);
     }
     displayOutput(result, true);
@@ -61,21 +67,24 @@ function operation(operator){
     switch(operator){
         case '+':
             total = firstnum + secondnum;
-            return total;
+            break;
         
         case '-':
             total = firstnum - secondnum;
-            return total;
+            break;
 
         case '*': 
             total = firstnum * secondnum;
-            return total;
+            break;
 
         case '/': 
             total = firstnum / secondnum;
-            return total;
-
+            break;
+  
     }
+    firstnum = total;
+    secondnum = null;
+    return total;
 }
 
 
@@ -87,7 +96,7 @@ function reset(){
     displayOutput("0");
 
     //reset the formula display to 0
-    displayFormula(formula);
+    displayFormula("");
     console.log(formula);
     firstnum , secondnum = null, null;
     operator = "";
